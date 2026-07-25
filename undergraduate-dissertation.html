@@ -21,6 +21,59 @@
       border-radius: 8px;
       margin: 24px 0;
     }
+
+    article {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #222;
+    }
+
+    article h2 {
+      margin-top: 48px;
+      margin-bottom: 16px;
+      font-size: 1.6rem;
+    }
+
+    article h3 {
+      margin-top: 32px;
+      font-size: 1.25rem;
+    }
+
+    article h4 {
+      margin-top: 20px;
+      font-size: 1.05rem;
+      color: #444;
+    }
+
+    #toc {
+      padding: 20px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+
+    #toc ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    #toc li {
+      margin-bottom: 6px;
+    }
+
+    #toc a {
+      text-decoration: none;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    #toc a:hover {
+      text-decoration: underline;
+    }
+
+    .toc-h3 { padding-left: 12px; }
+    .toc-h4 { padding-left: 24px; }
   </style>
 </head>
 
@@ -42,24 +95,68 @@
     </h1>
 
     <p class="text-muted mb-4">
-      Undergraduate (MA) Philosophy Dissertation (2024)
+      Undergraduate (MA) Philosophy Dissertation (2024) - Pia Fullaondo
     </p>
 
-    <!-- IMAGE -->
     <img src="../assets/Delegation.png" alt="Article image" class="hero-image">
 
-    <h2 class="h4 mt-4">What it does</h2>
-    <p>
-      An analysis of how many films pass the Bechdel Test (do at least two named women talk to each
-      other about something other than a man?), broken down by year, genre, and studio, to show how
-      representation has — or hasn't — shifted over time.
-    </p>
+    <!-- TABLE OF CONTENTS -->
+    <div id="toc" class="mb-5"></div>
 
-    <h2 class="h4 mt-4">How it was built</h2>
-    <p>
-      Replace this paragraph with your real data source (e.g. bechdeltest.com API), the cleaning
-      steps, and the charting library used to produce the visualisations.
-    </p>
+    <article id="article-content">
+
+      <h2>Moral Decisions and Artificial Moral Agents</h2>
+      <p>
+        Moral decisions present challenges to Artificial Moral Agents that undermine our motivations to pursue such entities.
+      </p>
+
+      <h3>Concerns Raised by the Delegation of Moral Decisions to AMAs</h3>
+
+      <h4>Evasion and Relocation of Moral Responsibility</h4>
+      <p>
+        The desire to delegate moral decision-making to AMAs reflects an inclination to evade the burden of moral responsibility.
+      </p>
+
+      <h4>Moral Deskilling and Desensitisation</h4>
+      <p>
+        The outsourcing of moral decision-making may lead to a decline in moral competencies and ethical awareness.
+      </p>
+
+      <h3>The Functional Moral Agent</h3>
+
+      <h4>The Gap in Moral Responsibility</h4>
+      <p>
+        Functional moral agents lack consciousness and free will, creating a gap in accountability.
+      </p>
+
+      <h4>The Degenerative Nature</h4>
+      <p>
+        Delegating moral decisions to such systems introduces risks without resolving core ethical challenges.
+      </p>
+
+      <h3>The Full Moral Agent</h3>
+
+      <h4>Moral Problems: Not an Issue of Quantity</h4>
+      <p>
+        The creation of full artificial agents is not justified by a shortage of moral decision-makers.
+      </p>
+
+      <h4>Futile Delegation</h4>
+      <p>
+        These agents would inherit similar limitations to human moral reasoning.
+      </p>
+
+      <h4>Moral Status and Slavery</h4>
+      <p>
+        Treating such agents as tools raises concerns about exploitation and moral status.
+      </p>
+
+      <h3>Conclusion</h3>
+      <p>
+        Artificial moral agents fail to offer a satisfactory solution to moral decision-making challenges.
+      </p>
+
+    </article>
 
   </div>
 </div>
@@ -71,6 +168,36 @@
     </p>
   </div>
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const content = document.getElementById("article-content");
+  const toc = document.getElementById("toc");
+
+  const headings = content.querySelectorAll("h2, h3, h4");
+  const ul = document.createElement("ul");
+
+  headings.forEach((heading, index) => {
+    const id = "section-" + index;
+    heading.id = id;
+
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+
+    a.href = "#" + id;
+    a.textContent = heading.textContent;
+
+    if (heading.tagName === "H3") li.classList.add("toc-h3");
+    if (heading.tagName === "H4") li.classList.add("toc-h4");
+
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+
+  toc.innerHTML = "<strong class='d-block mb-2'>Contents</strong>";
+  toc.appendChild(ul);
+});
+</script>
 
 </body>
 </html>
