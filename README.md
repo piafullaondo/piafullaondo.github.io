@@ -2,30 +2,12 @@
 
 A personal portfolio site showcasing data science projects, articles, and certificates.
 
-🔗 **Live site:** _add your GitHub Pages URL here once deployed, e.g._
-`https://piafullaondo.github.io/<repo-name>/`
+🔗 **Live site:** `https://piafullaondo.github.io/<repo-name>/`
 
 ## About
 
 This site is a single-page portfolio with a hero carousel, an about section, a project grid,
 a list of articles, and courses/certificates — plus standalone pages for each project.
-
-## Structure
-
-```
-.
-├── index.html                 # Homepage (hero, about, projects, articles, courses)
-├── assets/
-│   ├── css/
-│   │   └── style.css          # Site styles
-│   ├── hero1.jpg / hero2.jpg / hero3.jpg   # Carousel images
-│   ├── profile.jpg            # About section photo
-│   └── p1.jpg / p2.jpg / p3.jpg            # Project card thumbnails
-└── projects/
-    ├── real-or-fake.html                  # Project page: Real face or AI-generated fake?
-    ├── celebrity-facial-recognition.html  # Project page: Celebrity Facial Recognition App
-    └── bechdel-test.html                  # Project page: The Bechdel Test analysis
-```
 
 ## Tech stack
 
