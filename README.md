@@ -2,7 +2,7 @@
 
 A personal portfolio site showcasing data science projects, articles, and certificates.
 
-🔗 **Live site:** `https://piafullaondo.github.io/<repo-name>/`
+🔗 **Live site:** `https://piafullaondo.github.io`
 
 ## About
 
