@@ -1,0 +1,145 @@
+/* -------------------------------------------------
+   Pia Fullaondo — portfolio stylesheet
+   ------------------------------------------------- */
+
+:root {
+  --ink: #1b1b1f;
+  --muted: #6b6b76;
+  --bg: #ffffff;
+  --bg-soft: #f7f7fb;
+  --accent: #3454d1;
+  --accent-soft: #eaeeff;
+  --radius: 12px;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+/* Smooth scrolling, but respect users who've asked for reduced motion */
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* Offset anchored sections so they don't hide under the sticky navbar */
+section[id] {
+  scroll-margin-top: 84px;
+}
+
+/* Navbar */
+.navbar {
+  backdrop-filter: blur(6px);
+}
+.nav-link {
+  font-weight: 600;
+  color: var(--muted) !important;
+}
+.nav-link.active,
+.nav-link:hover {
+  color: var(--accent) !important;
+}
+
+/* Hero / carousel */
+.hero {
+  height: 60vh;
+  object-fit: cover;
+  filter: brightness(0.65);
+}
+.carousel-caption h1 {
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  text-shadow: 0 2px 12px rgba(0,0,0,.35);
+}
+
+/* Section rhythm */
+.section {
+  padding: 64px 0;
+}
+.section-title {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.section-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .75rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Project cards */
+.project-grid img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+.card {
+  border: 0;
+  transition: transform .15s ease, box-shadow .15s ease;
+  border-radius: var(--radius);
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,.08);
+}
+
+/* About */
+.profile {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Articles / courses lists */
+.list-clean {
+  list-style: none;
+  padding-left: 0;
+}
+.list-clean li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.list-clean a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+}
+.list-clean a:hover {
+  color: var(--accent);
+}
+
+footer {
+  padding: 30px 0;
+  text-align: center;
+  color: var(--muted);
+  background: var(--bg-soft);
+}
+
+/* Keyboard focus visibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Project detail pages */
+.project-hero-img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
