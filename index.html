@@ -3,27 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pia Fullaondo — Data Science Portfolio</title>
-  <meta name="description" content="Data science portfolio of Pia Fullaondo: projects, articles, and certificates." />
-
-  <!-- Bootstrap for layout & carousel -->
+  <title>PIA FULLAONDO </title>
+  <!-- Bootstrap CDN for layout & carousel -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <!-- Site styles -->
-  <link href="assets/css/style.css" rel="stylesheet"/>
+  <style>
+    body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    .hero { height: 60vh; object-fit: cover; }
+    .project-grid img { width:100%; height:160px; object-fit:cover; border-radius:8px; }
+    .card { border:0; }
+    .profile { width:140px; height:140px; object-fit:cover; border-radius:50%; }
+    footer { padding: 30px 0; text-align:center; color:#666; }
+    .nav-link { font-weight:600; }
+  </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Pia Fullaondo</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+    <a class="navbar-brand fw-bold" href="#">PIA FULLAONDO</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">☰</button>
     <div class="collapse navbar-collapse" id="nav">
       <ul class="navbar-nav ms-auto gap-3">
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#articles">Articles</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#courses">Certificates</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://github.com/piafullaondo" target="_blank" rel="noopener">GitHub</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://github.com/piafullaondo" target="_blank">GitHub</a></li>
       </ul>
     </div>
   </div>
@@ -33,168 +37,115 @@
 <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="assets/hero1.jpg" class="d-block w-100 hero" alt="Pia Fullaondo portfolio banner, image 1">
+      <img src="assets/hero1.jpg" class="d-block w-100 hero" alt="Slide 1">
       <div class="carousel-caption d-none d-md-block">
-        <h1 class="fw-bold">Hi, I'm Pia Fullaondo.</h1>
+        <h1 class="fw-bold">Hi, I am Pia Fullaondo.</h1>
+        <h4>Source.</h4>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="assets/hero2.jpg" class="d-block w-100 hero" alt="Pia Fullaondo portfolio banner, image 2">
+      <img src="assets/hero2.jpg" class="d-block w-100 hero" alt="Slide 2">
       <div class="carousel-caption d-none d-md-block">
-        <h1 class="fw-bold">Welcome to my data science portfolio.</h1>
+        <h1 class="fw-bold">Welcome to my data science portfolio!</h1>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="assets/hero3.jpg" class="d-block w-100 hero" alt="Pia Fullaondo portfolio banner, image 3">
+      <img src="assets/hero3.jpg" class="d-block w-100 hero" alt="Slide 3">
       <div class="carousel-caption d-none d-md-block">
-        <h1 class="fw-bold">My work, thoughts, and ideas — in one place.</h1>
+        <h1 class="fw-bold">You can find my work, thoughts, and ideas here.</h1>
       </div>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+    <span class="carousel-control-prev-icon"></span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+    <span class="carousel-control-next-icon"></span>
   </button>
 </div>
 
-<div class="container">
-
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="row align-items-center g-4">
-      <div class="col-md-3 text-center">
-        <img src="assets/profile.jpg" class="profile" alt="Portrait of Pia Fullaondo"/>
-      </div>
-      <div class="col-md-9">
-        <p class="section-eyebrow">About</p>
-        <h2 class="section-title">A bit about me</h2>
-        <p>I'm a data scientist with a passion for storytelling — I like turning messy datasets into
-          plain-language findings people can actually act on. This site collects the projects, articles,
-          and courses I've picked up along the way.</p>
-      </div>
+<div class="container my-5">
+  <!-- Projects grid -->
+  <h2 id="Articles" class="mb-4">Some articles I've writen</h2>
+  <div class="row g-3 project-grid">
+    <!-- Project card 1 -->
+    <div class="col-md-4">
+      <a href="https://link-to-blog-or-demo.com" target="_blank" style="text-decoration:none;color:inherit;">
+        <div class="card p-3">
+          <img src="assets/p1.jpg" alt="project 1">
+          <div class="card-body p-0 mt-2">
+            <h5 class="mb-1">Article 1</h5>
+            <p class="small text-muted">Quiz app + article — click to read/demo</p>
+          </div>
+        </div>
+      </a>
     </div>
-  </section>
 
-  <!-- ARTICLES -->
-  <section id="articles" class="section">
-    <p class="section-eyebrow">Writing</p>
-    <h2 class="section-title">Articles</h2>
-    <div class="row g-3 project-grid">
-
-      <div class="col-md-4">
-        <a href="https://towardsdatascience.com/example-article" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
-          <div class="card p-3 h-100">
-            <img src="assets/a1.jpg" alt="Illustration for the article on women in data science">
-            <div class="card-body p-0 mt-2">
-              <h5 class="mb-1">Why aren't there more women in data science?</h5>
-              <p class="small text-muted">Article on Towards Data Science</p>
-            </div>
+    <!-- Project card 2 -->
+    <div class="col-md-4">
+      <a href="https://link-to-github.com" target="_blank" style="text-decoration:none;color:inherit;">
+        <div class="card p-3">
+          <img src="assets/p2.jpg" alt="project 2">
+          <div class="card-body p-0 mt-2">
+            <h5 class="mb-1">Celebrity Facial Recognition App</h5>
+            <p class="small text-muted">Demo + code</p>
           </div>
-        </a>
-      </div>
-
-      <div class="col-md-4">
-        <a href="#" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
-          <div class="card p-3 h-100">
-            <img src="assets/a2.jpg" alt="Illustration for the article on changing the world with data science">
-            <div class="card-body p-0 mt-2">
-              <h5 class="mb-1">How to change the world with data science?</h5>
-              <p class="small text-muted">Article</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
+        </div>
+      </a>
     </div>
-  </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <p class="section-eyebrow">Selected work</p>
-    <h2 class="section-title">Some Things I've Worked On</h2>
-    <div class="row g-3 project-grid">
-
-      <div class="col-md-4">
-        <a href="projects/real-or-fake.html" style="text-decoration:none;color:inherit;">
-          <div class="card p-3 h-100">
-            <img src="assets/p1.jpg" alt="Screenshot of the real-vs-AI-face quiz app">
-            <div class="card-body p-0 mt-2">
-              <h5 class="mb-1">Real face or AI-generated fake?</h5>
-              <p class="small text-muted">Quiz app + article on spotting synthetic faces</p>
-            </div>
+    <!-- Project card 3 -->
+    <div class="col-md-4">
+      <a href="#" style="text-decoration:none;color:inherit;">
+        <div class="card p-3">
+          <img src="assets/p3.jpg" alt="project 3">
+          <div class="card-body p-0 mt-2">
+            <h5 class="mb-1">The Bechdel Test: Gender disparity</h5>
+            <p class="small text-muted">Data viz & analysis</p>
           </div>
-        </a>
-      </div>
-
-      <div class="col-md-4">
-        <a href="projects/celebrity-facial-recognition.html" style="text-decoration:none;color:inherit;">
-          <div class="card p-3 h-100">
-            <img src="assets/p2.jpg" alt="Screenshot of the celebrity facial recognition app">
-            <div class="card-body p-0 mt-2">
-              <h5 class="mb-1">Celebrity Facial Recognition App</h5>
-              <p class="small text-muted">Demo + code walkthrough</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-4">
-        <a href="projects/bechdel-test.html" style="text-decoration:none;color:inherit;">
-          <div class="card p-3 h-100">
-            <img src="assets/p3.jpg" alt="Chart from the Bechdel Test gender disparity analysis">
-            <div class="card-body p-0 mt-2">
-              <h5 class="mb-1">The Bechdel Test: Gender disparity</h5>
-              <p class="small text-muted">Data viz & analysis</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
+        </div>
+      </a>
     </div>
-  </section>
+  </div>
 
-  <!-- COURSES -->
-  <section id="courses" class="section">
-    <p class="section-eyebrow">Learning</p>
-    <h2 class="section-title">Courses & Certificates</h2>
-    <ul class="list-clean">
-      <li><a href="#">Linear Algebra — edX</a></li>
-      <li><a href="#">Probability and Statistics — Coursera</a></li>
+  <!-- About -->
+  <div id="about" class="row align-items-center mt-5">
+    <div class="col-md-3 text-center">
+      <img src="assets/profile.jpg" class="profile" alt="profile"/>
+    </div>
+    <div class="col-md-9">
+      <h3>About Pia Fullaondo</h3>
+      <p>I am a data scientist with a passion for storytelling....</p>
+    </div>
+  </div>
+
+  <!-- Articles / Courses -->
+  <div id="articles" class="mt-5">
+    <h4>Articles</h4>
+    <ul>
+      <li><a href="https://towardsdatascience.com/example-article" target="_blank">Why aren’t there more women in data science?</a></li>
+      <li><a href="#" target="_blank">How to change the world with data science?</a></li>
     </ul>
-  </section>
+  </div>
+
+  <div id="courses" class="mt-5">
+    <h4>Courses & Certificates</h4>
+    <ul>
+      <li><a href="#">Linear Algebra - edX</a></li>
+      <li><a href="#">Probability and Statistics - Coursera</a></li>
+    </ul>
+  </div>
 
 </div>
 
 <footer>
   <div class="container">
     <p>Thanks for reading — feel free to <a href="mailto:fullaondo.pia@gmail.com">reach out</a>.</p>
-    <p>&copy; <span id="year"></span> Pia Fullaondo</p>
+    <p>&copy; <span id="year"></span> PIA FULLAONDO</p>
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Highlight the current section's nav link on scroll
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
-  const setActive = () => {
-    let current = '';
-    sections.forEach(sec => {
-      const top = sec.offsetTop - 100;
-      if (window.scrollY >= top) current = sec.id;
-    });
-    navLinks.forEach(link => {
-      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
-    });
-  };
-  window.addEventListener('scroll', setActive);
-  setActive();
-</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear()</script>
 </body>
 </html>
